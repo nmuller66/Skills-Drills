@@ -1,0 +1,15 @@
+Interpreting Linux File System Permissions 
+
+Objectives
+
+After completing this section, you should be able to list file-system permissions on files and directories, and interpret the effects of those permission on access by users and groups.
+
+Linux File-system Permissions
+
+File permissions controls access to files. Linux file permissions is simple but flexible, easy to understand and apply, yet can handles most normal permissions cases easily.
+
+Files has three user categories to which permission apply. The file is owned by a user, normally the one who create the file. The files is also owned by a single group, usually the primary group of the user who created the file, but this can be changed. Different permissions is set for the owning user, the owning group, and for all other user on the system that are not the user or a member of the owning group. The most specific permissions takes precedence. User permissions overrides group permissions,which overrides other permissions.
+
+Users normally has both read and execute permissions on read-only directories so that they can list the directory and have full read-only access to its contents. If a user only have read access on a directory, the names of the files in it can be listed, but no other information, including permissions or time stamps, are available, nor can they be accessed. 
+
+If a user only have execute access on a directory, they cannot list file names in the directory. If they know the name of a file that they have permission to read, they can access the contents of that file from outside the directory by explicitly specifying the relative file name.
